@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <div class="dropdown-btn" id="dropdown-btn"> <!-- Adicionado o atributo de ID -->
+                <span class="dropdown-name">menu</span>
+            </div>
+            <div class="dropdown-menu-box">
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">your profile</li>
+                    <li class="dropdown-item">your dashboard</li>
+                    <li class="dropdown-item">recent activity</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script> 
+        let dropdown = document.querySelector('.dropdown');
+        let dropdownBtn = document.getElementById('dropdown-btn');
+
+        dropdownBtn.addEventListener('click', () => { 
+            dropdown.classList.toggle('dropdown-active');
+        });
+    </script>
+</body>
+</html>
